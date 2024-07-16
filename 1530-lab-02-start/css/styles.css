@@ -15,17 +15,120 @@ font-family: 'Pacifico', cursive;
 */
 
 /* UNIVERSAL STYLES */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #20abad;
+    color: #eeeaeb;
+}
 
+.hero-content {
+    display: flex;
+}
 
+.title {
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    padding: 0.5rem;
+}
+
+a{
+    color: #eeeaeb;
+}
+
+.underline {
+    display: flex;
+    margin: 1.5rem 1rem;
+}
+
+.submenu > li > a {
+    display: flex;
+    text-decoration: none;
+    margin: 1rem 2rem;
+}
+
+.drop-down {
+    height: 1rem;
+}
+
+.body-content {
+    background: url('../img/grapefruit-bg.webp') center / cover no-repeat;
+    height: calc(100vh / 2);
+}
+
+.body-text {
+    color: #eeeaeb;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.body-text > p {
+    margin-top: 1.5rem;
+}
+
+.body-text > h1 {
+    font-family: 'Pacifico', cursive;
+    padding-top: 1rem;
+    font-size: 3rem;
+    text-wrap: wrap;
+}
+
+button {
+    background-color: #20abad;
+    color: #eeeaeb;
+    border-radius: 0.25rem;
+    width: 8rem;
+    height: 3rem;
+    text-decoration: underline;
+    margin: 3rem;
+}
 /* MOBILE VIEW */
 
+.underline > img {
+    visibility: hidden;
+}
 
 /* DESKTOP VIEW */
 @media screen and (min-width: 720px) {
 
+    .hero-content {
+        height: calc(100vh / 10);
+        justify-content: space-evenly;
+    }
+    .menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .underline > img {
+        visibility: visible;
+        filter: invert(1);
+        margin: 0.25rem 0.5rem;
+    }
+    ul li ul {
+       visibility: hidden;
+    }
+    ul li:hover > ul, 
+    ul li ul:hover {
+        visibility: visible;
+    }
+    .body-content {
+        height: calc(100vh / 1.1);
+    }
+    .underline {
+        justify-content: center;
+    }
+    .body-text {
+        margin-left: 20rem;
+        padding-top: 10rem;
+    }
 }
 
 /* LARGEST VIEW */
 @media screen and (min-width: 1024px) {
-    
+    .body-text {
+        margin-left: 30rem;
+        padding-top: 20rem;
+    }
 }
