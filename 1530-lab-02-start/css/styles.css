@@ -110,7 +110,9 @@ button {
        visibility: hidden;
     }
     ul li:hover > ul, 
-    ul li ul:hover {
+    ul li:focus > ul, 
+    ul li ul:hover,
+    ul li ul:focus-within {
         visibility: visible;
     }
     .body-content {
